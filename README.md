@@ -1,6 +1,16 @@
 # VPM Registry
 
-## Getting Started
+This is an **experiment** to create a VRChat Package Manager (VPM) registry, developed using the [Bullet Train](https://bullettrain.co/) Ruby on Rails SaaS Framework.
+
+## Why?
+
+Because I thought it might be a fun experiment.
+
+VRChat has already explicitly stated their [intentions to host community packages](https://vcc.docs.vrchat.com/vpm/packages/#community-packages) in the future.
+
+As such, this project is expected to have a limited lifespan, *is not developed with battle-tested production-readiness in mind*, and will likely be deprecated as soon as VRChat releases their official community package host.
+
+## Development
 
 1. You must have the following dependencies installed:
 
@@ -18,7 +28,7 @@
 3. Start the application with `bin/dev`.
 4. Visit http://localhost:3000.
 
-## Information about Bullet Train
+###  Information about Bullet Train
 If this is your first time working on a Bullet Train application, be sure to review the [Bullet Train Basic Techniques](https://bullettrain.co/docs/getting-started) and the [Bullet Train Developer Documentation](https://bullettrain.co/docs).
 
 ## Deploying
