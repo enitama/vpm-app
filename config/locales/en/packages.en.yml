@@ -1,0 +1,89 @@
+en:
+  packages: &packages
+    label: &label Packages
+    breadcrumbs:
+      label: *label
+    navigation:
+      label: *label
+      icon: ti ti-package
+    buttons: &buttons
+      new: Add New Package
+      create: Create Package
+      edit: Edit Package
+      update: Update Package
+      destroy: Remove Package
+      shorthand:
+        edit: Edit
+        destroy: Delete
+      confirmations:
+        # TODO customize for your use-case.
+        destroy: Are you sure you want to remove %{package_name}? This will also remove any child resources and can't be undone.
+    fields: &fields
+      id:
+        heading: Package ID
+      team_id:
+        heading: Team ID
+      name:
+        _: &name Name
+        label: *name
+        heading: *name
+      # 🚅 super scaffolding will insert new fields above this line.
+      created_at:
+        _: &created_at Added
+        label: *created_at
+        heading: *created_at
+      updated_at:
+        _: &updated_at Updated
+        label: *updated_at
+        heading: *updated_at
+    api:
+      collection_actions: "Collection Actions for Packages"
+      index: "List Packages"
+      create: "Add a New Package"
+      member_actions: "Actions for an Individual Package"
+      show: "Retrieve a Package"
+      update: "Update a Package"
+      destroy: "Delete a Package"
+      fields: *fields
+    index:
+      section: "%{teams_possessive} Packages"
+      contexts:
+        team:
+          header: Packages
+          description: Below is a list of Packages that have been added for %{team_name}.
+          description_empty: No Packages have been added for %{team_name}.
+      fields: *fields
+      buttons: *buttons
+    show:
+      section: "%{package_name}"
+      header: Package Details
+      description: Below are the details we have for %{package_name}.
+      manage_description: You'll also find options for updating these details or removing %{package_name} from %{team_name} entirely.
+      fields: *fields
+      buttons: *buttons
+    form: &form
+      buttons: *buttons
+      fields: *fields
+    new:
+      section: "New Package for %{team_name}"
+      header: New Package Details
+      description: Please provide the details of the new Package you'd like to add to %{team_name}.
+      form: *form
+    edit:
+      section: "%{package_name}"
+      header: Edit Package Details
+      description: You can update the details or settings for %{package_name} below.
+      form: *form
+    notifications:
+      created: Package was successfully created.
+      updated: Package was successfully updated.
+      destroyed: Package was successfully destroyed.
+  account:
+    packages: *packages
+  activerecord:
+    attributes:
+      package:
+        name: *name
+        # 🚅 super scaffolding will insert new activerecord attributes above this line.
+        created_at: *created_at
+        updated_at: *updated_at
