@@ -1,5 +1,6 @@
 default:
   models:
+    PackageVersion: read
     Package: read
     Team: read
     Membership:
@@ -29,6 +30,7 @@ admin:
     - admin
     - editor
   models:
+    PackageVersion: manage
     Package: manage
     Team: manage
     Membership: manage

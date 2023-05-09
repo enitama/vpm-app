@@ -31,7 +31,9 @@ shallow do
         # 🚅 super scaffolding will insert new integration installations above this line.
       end
 
-      resources :packages
+      resources :packages do
+        resources :package_versions
+      end
     end
   end
 end

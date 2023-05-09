@@ -1,0 +1,94 @@
+en:
+  package_versions: &package_versions
+    label: &label Package Versions
+    breadcrumbs:
+      label: *label
+    navigation:
+      label: *label
+      icon: fal fa-puzzle-piece
+    buttons: &buttons
+      new: Add New Package Version
+      create: Create Package Version
+      edit: Edit Package Version
+      update: Update Package Version
+      destroy: Remove Package Version
+      shorthand:
+        edit: Edit
+        destroy: Delete
+      confirmations:
+        # TODO customize for your use-case.
+        destroy: Are you sure you want to remove %{package_version_name}? This will also remove any child resources and can't be undone.
+    fields: &fields
+      id:
+        heading: Package Version ID
+      package_id:
+        heading: Package ID
+      name:
+        _: &name Name
+        label: *name
+        heading: *name
+      description:
+        _: &description Description
+        label: *description
+        heading: *description
+      # 🚅 super scaffolding will insert new fields above this line.
+      created_at:
+        _: &created_at Added
+        label: *created_at
+        heading: *created_at
+      updated_at:
+        _: &updated_at Updated
+        label: *updated_at
+        heading: *updated_at
+    api:
+      collection_actions: "Collection Actions for Package Versions"
+      index: "List Package Versions"
+      create: "Add a New Package Version"
+      member_actions: "Actions for an Individual Package Version"
+      show: "Retrieve a Package Version"
+      update: "Update a Package Version"
+      destroy: "Delete a Package Version"
+      fields: *fields
+    index:
+      section: "%{packages_possessive} Package Versions"
+      contexts:
+        package:
+          header: Package Versions
+          description: Below is a list of Package Versions that have been added for %{package_name}.
+          description_empty: No Package Versions have been added for %{package_name}.
+      fields: *fields
+      buttons: *buttons
+    show:
+      section: "%{package_version_name}"
+      header: Package Version Details
+      description: Below are the details we have for %{package_version_name}.
+      manage_description: You'll also find options for updating these details or removing %{package_version_name} from %{package_name} entirely.
+      fields: *fields
+      buttons: *buttons
+    form: &form
+      buttons: *buttons
+      fields: *fields
+    new:
+      section: "New Package Version for %{package_name}"
+      header: New Package Version Details
+      description: Please provide the details of the new Package Version you'd like to add to %{package_name}.
+      form: *form
+    edit:
+      section: "%{package_version_name}"
+      header: Edit Package Version Details
+      description: You can update the details or settings for %{package_version_name} below.
+      form: *form
+    notifications:
+      created: Package Version was successfully created.
+      updated: Package Version was successfully updated.
+      destroyed: Package Version was successfully destroyed.
+  account:
+    package_versions: *package_versions
+  activerecord:
+    attributes:
+      package_version:
+        name: *name
+        description: *description
+        # 🚅 super scaffolding will insert new activerecord attributes above this line.
+        created_at: *created_at
+        updated_at: *updated_at

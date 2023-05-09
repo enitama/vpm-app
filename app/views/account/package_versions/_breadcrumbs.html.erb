@@ -1,0 +1,8 @@
+<% package_version ||= @package_version %>
+<% package ||= @package || package_version&.package %>
+<%= render 'account/packages/breadcrumbs', package: package %>
+<%= render 'account/shared/breadcrumb', label: t('.label'), url: [:account, package, :package_versions] %>
+<% if package_version&.persisted? %>
+  <%= render 'account/shared/breadcrumb', label: package_version.label_string, url: [:account, package_version] %>
+<% end %>
+<%= render 'account/shared/breadcrumbs/actions', only_for: 'package_versions' %>

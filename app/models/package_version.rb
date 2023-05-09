@@ -1,14 +1,14 @@
-class Package < ApplicationRecord
+class PackageVersion < ApplicationRecord
   # 🚅 add concerns above.
 
   # 🚅 add attribute accessors above.
 
-  belongs_to :team
+  belongs_to :package
   # 🚅 add belongs_to associations above.
 
-  has_many :package_versions, dependent: :destroy
   # 🚅 add has_many associations above.
 
+  has_one :team, through: :package
   # 🚅 add has_one associations above.
 
   # 🚅 add scopes above.
