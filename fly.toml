@@ -1,0 +1,29 @@
+# fly.toml app configuration file generated for polished-dawn-9070 on 2023-05-09T23:23:26+09:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "polished-dawn-9070"
+primary_region = "nrt"
+
+[env]
+  PORT = "3000"
+  RACK_ENV = "development"
+
+[processes]
+  web = "bundle exec puma -t 5:5"
+  worker = "bundle exec sidekiq -t 25"
+
+[deploy]
+  release_command = "sh fly-release.sh"
+
+[http_service]
+  processes = ["web"] # this service only applies to the web process
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+
+[[statics]]
+  guest_path = "/rails/public"
+  url_prefix = "/"

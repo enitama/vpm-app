@@ -250,6 +250,8 @@ GEM
       railties (~> 7.0)
       rotp (~> 6.0)
     docile (1.4.0)
+    dockerfile-rails (1.2.5)
+      rails
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     doorkeeper (5.6.6)
@@ -628,6 +630,7 @@ DEPENDENCIES
   debug (= 1.7.2)
   devise
   devise-two-factor
+  dockerfile-rails (>= 1.2)
   factory_bot_rails
   foreman
   honeybadger

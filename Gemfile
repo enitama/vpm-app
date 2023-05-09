@@ -6,7 +6,9 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby(File.read(File.expand_path(".ruby-version", __dir__)))
+ruby "3.2.2"
+# Doesn't seem to work on Fly.io
+# ruby(File.read(File.expand_path(".ruby-version", __dir__)))
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.0"
@@ -180,3 +182,5 @@ gem "pry"
 # that you run into a merge conflict in the future.
 
 # 🚅 super scaffolding will insert new oauth providers above this line.
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
