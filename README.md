@@ -41,7 +41,7 @@ Deploy with
 fly deploy
 ```
 
-Unfortunately this app does not fit in Fly.io's hobby limits. The web process cannot fit in 512 MB RAM.
+Unfortunately this app does not fit in Fly.io's hobby limits. The web process cannot fit in 256 MB RAM.
 
 If you are using `shared-cpu-1x`, run:
 
